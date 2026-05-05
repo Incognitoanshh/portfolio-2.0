@@ -5,7 +5,7 @@ import { SOCIAL_LINKS } from '@/lib/constants'
 
 const ROLES = [
   'Full Stack Developer',
-  'Cloud/DevOps Engineer',
+  'DevOps Engineer',
   'AWS Architect',
   'Blockchain Developer',
   'React Specialist',
@@ -103,7 +103,7 @@ export default function Hero() {
         {/* Stats row */}
         <div className="flex items-center justify-center gap-8 mb-10">
           {[
-            { val: '8.1', label: 'CGPA' },
+            { val: '7.39', label: 'CGPA' },
             { val: '2+', label: 'Internships' },
             { val: '5+', label: 'Projects' },
             { val: '15+', label: 'Tech Stack' },

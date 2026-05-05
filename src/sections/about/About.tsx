@@ -68,7 +68,7 @@ export default function About() {
                   <h4 className="text-text-primary font-medium text-sm">B.E. in Information Science</h4>
                   <p className="font-mono text-xs text-text-muted mt-0.5">Cambridge Institute of Technology, Bangalore</p>
                   <div className="flex items-center gap-3 mt-1">
-                    <span className="tag">CGPA: 8.1 / 10</span>
+                    <span className="tag">CGPA: 7.39 / 10</span>
                     <span className="font-mono text-[10px] text-text-muted">2021 – 2025</span>
                   </div>
                 </div>
