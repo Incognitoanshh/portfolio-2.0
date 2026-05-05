@@ -112,4 +112,6 @@ export const SOCIAL_LINKS = {
   linkedin: 'https://linkedin.com/in/amritanshu1403',
   email: 'amritanshu140101@gmail.com',
   portfolio: 'https://amritanshu143.netlify.app',
+  instagram: 'https://www.instagram.com/annshh.x_/',
+  twitter: 'https://twitter.com/Incognitoanshh',
 }

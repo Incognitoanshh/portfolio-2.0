@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Github, Linkedin, Send, Copy, Check } from 'lucide-react'
+import { Github, Linkedin, Send, Copy, Check, ExternalLink } from 'lucide-react'
 import SectionWrapper from '@/components/common/SectionWrapper'
 import { SOCIAL_LINKS } from '@/lib/constants'
 
@@ -15,24 +15,11 @@ const InstagramIcon = () => (
   </svg>
 )
 
-const ExternalLinkIcon = () => (
-  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
-  </svg>
-)
-
-type SocialItem = {
-  icon: React.ComponentType
-  label: string
-  handle: string
-  href: string
-}
-
-const SOCIALS: SocialItem[] = [
-  { icon: Github, label: 'GitHub', handle: '@Incognitoanshh', href: SOCIAL_LINKS.github },
-  { icon: Linkedin, label: 'LinkedIn', handle: 'amritanshu1403', href: SOCIAL_LINKS.linkedin },
-  { icon: TwitterIcon, label: 'Twitter / X', handle: '@_AmritAns7u', href: 'https://x.com/_AmritAns7u' },
-  { icon: InstagramIcon, label: 'Instagram', handle: '@annshh.x_', href: 'https://www.instagram.com/annshh.x_/' },
+const SOCIALS = [
+  { Icon: Github, label: 'GitHub', handle: '@Incognitoanshh', href: SOCIAL_LINKS.github },
+  { Icon: Linkedin, label: 'LinkedIn', handle: 'amritanshu1403', href: SOCIAL_LINKS.linkedin },
+  { Icon: TwitterIcon, label: 'Twitter / X', handle: '@_AmritAns7u', href: SOCIAL_LINKS.twitter },
+  { Icon: InstagramIcon, label: 'Instagram', handle: '@annshh.x_', href: SOCIAL_LINKS.instagram },
 ]
 
 export default function Contact() {
@@ -46,9 +33,9 @@ export default function Contact() {
   }
 
   const handleSubmit = () => {
-    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`)
-    const body = encodeURIComponent(`Hi Amritanshu,\n\n${form.message}\n\n— ${form.name}\n${form.email}`)
-    window.location.href = `mailto:${SOCIAL_LINKS.email}?subject=${subject}&body=${body}`
+    const subject = encodeURIComponent('Portfolio Contact from ' + form.name)
+    const body = encodeURIComponent('Hi Amritanshu,\n\n' + form.message + '\n\n— ' + form.name + '\n' + form.email)
+    window.location.href = 'mailto:' + SOCIAL_LINKS.email + '?subject=' + subject + '&body=' + body
   }
 
   return (
@@ -67,8 +54,8 @@ export default function Contact() {
         <div className="space-y-8">
           <SectionWrapper>
             <p className="text-text-secondary leading-relaxed text-sm max-w-md">
-              I'm actively looking for full-time opportunities in Full Stack Development or Cloud/DevOps.
-              If you have a role, a project, or just want to connect — hit me up.
+              I am actively looking for full-time opportunities in Full Stack Development or Cloud/DevOps.
+              If you have a role, a project, or just want to connect, hit me up.
             </p>
           </SectionWrapper>
 
@@ -89,24 +76,22 @@ export default function Contact() {
 
           <SectionWrapper delay={150}>
             <div className="space-y-3">
-              {SOCIALS.map(({ icon: Icon, label, handle, href }) => (
+              {SOCIALS.map((item) => (
                 
-                  key={label}
-                  href={href}
+                  key={item.label}
+                  href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 glass border border-border/30 rounded-xl p-4 hover:border-cyan/30 transition-all duration-300"
                 >
                   <div className="w-9 h-9 flex items-center justify-center border border-border rounded-lg group-hover:border-cyan/30 group-hover:bg-cyan/5 transition-all duration-300 text-text-secondary group-hover:text-cyan">
-                    <Icon />
+                    <item.Icon size={15} />
                   </div>
                   <div>
-                    <p className="text-text-primary text-sm font-medium">{label}</p>
-                    <p className="font-mono text-[10px] text-text-muted">{handle}</p>
+                    <p className="text-text-primary text-sm font-medium">{item.label}</p>
+                    <p className="font-mono text-[10px] text-text-muted">{item.handle}</p>
                   </div>
-                  <span className="ml-auto text-text-muted group-hover:text-cyan transition-colors">
-                    <ExternalLinkIcon />
-                  </span>
+                  <ExternalLink size={12} className="ml-auto text-text-muted group-hover:text-cyan transition-colors" />
                 </a>
               ))}
             </div>
@@ -142,7 +127,7 @@ export default function Contact() {
                 <textarea
                   value={form.message}
                   onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                  placeholder="Hey Amritanshu, I'd like to..."
+                  placeholder="Hey Amritanshu, I would like to..."
                   rows={5}
                   className="w-full bg-bg border border-border rounded-lg px-4 py-3 text-sm text-text-primary placeholder-text-muted font-mono focus:outline-none focus:border-cyan/40 transition-colors duration-300 resize-none"
                 />
