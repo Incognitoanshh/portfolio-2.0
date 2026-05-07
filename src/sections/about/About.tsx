@@ -31,7 +31,7 @@ export default function About() {
 
               <p className="text-text-secondary text-sm leading-relaxed mb-6">
                 Engineering grad from <span className="text-text-primary">Cambridge Institute of Technology, Bangalore</span>{' '}
-                with a CGPA of <span className="text-cyan font-mono">8.1/10</span>. Passionate about building scalable,
+                with a CGPA of <span className="text-cyan font-mono">7.39/10</span>. Passionate about building scalable,
                 production-grade systems — from polished frontends with React/Next.js to containerized cloud backends
                 on AWS with Docker and Kubernetes.
               </p>
@@ -74,7 +74,7 @@ export default function About() {
                 </div>
                 <div className="border-t border-border/30 pt-4">
                   <h4 className="text-text-primary font-medium text-sm">Pre-University (CBSE)</h4>
-                  <p className="font-mono text-xs text-text-muted mt-0.5">71.4% · 2019 – 2021</p>
+                  <p className="font-mono text-xs text-text-muted mt-0.5">70.4% · 2019 – 2021</p>
                 </div>
               </div>
             </div>

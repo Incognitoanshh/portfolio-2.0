@@ -115,3 +115,5 @@ export const SOCIAL_LINKS = {
   instagram: 'https://www.instagram.com/annshh.x_/',
   twitter: 'https://twitter.com/Incognitoanshh',
 }
+
+//npm run build && netlify deploy --prod --dir=dist

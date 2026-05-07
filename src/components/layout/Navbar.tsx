@@ -40,7 +40,7 @@ export default function Navbar() {
               AMRITANSHU
             </span>
             <span className="font-mono text-xs text-text-secondary group-hover:text-cyan transition-colors duration-300">
-              .dev
+              .codde
             </span>
           </Link>
 
